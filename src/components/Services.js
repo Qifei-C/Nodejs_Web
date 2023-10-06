@@ -46,7 +46,7 @@ const Services = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           {/* text & img */}
-          <motion.div variants={fadeIn('right', 0.3)} initial='hidden' whileInView={'show'} viewport={{once:true,amount:0.7}} className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'>
+          <motion.div variants={fadeIn('right', 0.3)} initial='hidden' whileInView={'show'} viewport={{once:true,amount:0.7}} className='flex-1 mx-auto lg:bg-services bg-contain lg:bg-bottom lg:mr-16 bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'>
             <h2 className='h2 text-accent mb-6'>So Far I Go.</h2>
             <h3 className='h3 max-w-[455px] text-[22px] mb-16'>B.S. in Applied Mathematics and Applied Data Science <span>at University of California, Santa Barbara.</span></h3>
             <button className='btn btn-sm'>Link to Github</button>

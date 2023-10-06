@@ -30,46 +30,7 @@ const Work = () => {
             </div>
             {/*image delete code part*/}
           </motion.div>
-          <motion.div 
-          variants={fadeIn('left', 0.2)} initial='hidden' whileInView={'show'} viewport={{once:true,amount:0.7}}
-          className='flex-1 flex flex-col gap-y-8'>
-            {/*image*/}
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
-                {/*overlay*/}
-                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'>
-                </div>
-                {/*img*/}
-                <img className='group-hover:scale-150 transition-all duration-500' src={Img1} alt='' />
-                {/*pretitle*/}
-                <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                  <span>
-                    UI/UX Design
-                  </span>
-                </div>
-                {/*title*/}
-                <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                  <span className='text-3xl text-white'>Project Title</span>
-                </div>
-            </div>
-            {/*image*/}
-            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
-                {/*overlay*/}
-                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'>
-                </div>
-                {/*img*/}
-                <img className='group-hover:scale-150 transition-all duration-500' src={Img1} alt='' />
-                {/*pretitle*/}
-                <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                  <span>
-                    UI/UX Design
-                  </span>
-                </div>
-                {/*title*/}
-                <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                  <span className='text-3xl text-white'>Project Title</span>
-                </div>
-            </div>
-          </motion.div>
+          
         </div>
       </div>
     </section>
@@ -78,6 +39,46 @@ const Work = () => {
 
 export default Work;
 
+//        <motion.div 
+//         variants={fadeIn('left', 0.2)} initial='hidden' whileInView={'show'} viewport={{once:true,amount:0.7}}
+//         className='flex-1 flex flex-col gap-y-8'>
+//            {/*image*/}
+//            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
+//                {/*overlay*/}
+//                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'>
+//                </div>
+//                {/*img*/}
+//                <img className='group-hover:scale-150 transition-all duration-500' src={Img1} alt='' />
+//                {/*pretitle*/}
+//                <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
+//                  <span>
+//                    UI/UX Design
+//                  </span>
+//                </div>
+//                {/*title*/}
+//                <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
+//                  <span className='text-3xl text-white'>Project Title</span>
+//                </div>
+//            </div>
+//            {/*image*/}
+//            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
+//                {/*overlay*/}
+//                <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'>
+//                </div>
+//                {/*img*/}
+//                <img className='group-hover:scale-150 transition-all duration-500' src={Img1} alt='' />
+//                {/*pretitle*/}
+//                <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
+//                  <span>
+//                    UI/UX Design
+//                  </span>
+//                </div>
+//                {/*title*/}
+//                <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
+//                  <span className='text-3xl text-white'>Project Title</span>
+//                </div>
+//            </div>
+//          </motion.div>
 
 //            <div className='group relative overflow-hidden border-2 border-white/50 rounded-xl'>
 //              {/*overlay*/}
