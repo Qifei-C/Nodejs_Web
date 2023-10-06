@@ -1,26 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { NavBar } from "./components/NavBar";
-import { Banner } from "./components/Banner";
-import { Skills } from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import { Education } from "./components/Education";
-import { Experiences } from './components/Experience';
+import React from 'react';
+// components
+import Banner from './components/Banner';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import About from './components/About';
+import Services from './components/Services';
+import Work from './components/Work';
+import Contact from './components/Contact';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <NavBar />
+    <div className='bg-site bg-no-repeat bg-cover overflow-hidden'>
+      <Header />
       <Banner />
-      <Education />
-      <Skills />
-      <Experiences />
-      <Projects />
+      <Nav />
+      <About />
+      <Services />
+      <Work />
+      {/* <Contact /> */}
+      {/* <div className='h-[1000px]'></div>*/}
     </div>
   );
-}
+};
 
 export default App;

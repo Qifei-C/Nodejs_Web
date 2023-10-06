@@ -1,13 +1,99 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 在你的 CSS 或 SCSS 文件中 */
+@font-face {
+  font-family: 'CentraNo2-Bold';
+  src: url('./assets/font/CentraNo2-Bold.ttf') format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'CentraNo1-Black';
+  src: url('./assets/font/CentraNo1-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CentraNo2-Book';
+  src: url('./assets/font/CentraNo2-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CentraNo2-Medium';
+  src: url('./assets/font/CentraNo2-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CentraNo2-Light';
+  src: url('./assets/font/CentraNo2-Light.ttf') format('truetype');
+}
+
+.btn {
+  background: linear-gradient(
+    92.23deg,
+    #3bace2 21.43%,
+    #8ff4bc 100.04%
+  );
+  box-shadow: 0px 4.42184px 107.23px rgba(86, 114, 255, 0.51);
+}
+
+.gradient-text{
+  color: linear-gradient(
+    92.23deg,
+    #3bace2 21.43%,
+    #8ff4bc 100.04%
+  );
+}
+
+.btn:hover {
+  background: linear-gradient(
+    92.23deg,
+    #84fab0 21.43%,
+    #3bace2 100.04%
+  );
+}
+
+.gradient,
+.active {
+  background: linear-gradient(
+    92.23deg,
+    #84fab0 21.43%,
+    #3bace2 100.04%
+  );
+}
+
+.active {
+  color: #fff;
+  padding: 1rem;
+  border-radius: 100%;
+}
+
+@layer base {
+  body {
+    @apply font-secondary text-lg leading-8 text-white;
+  }
+  .h2 {
+    @apply font-primary text-[36px] mb-6 tracking-[10%] uppercase;
+  }
+  .h3 {
+    @apply font-primary font-semibold text-[24px] mb-6 leading-[30px];
+  }
+  .btn {
+    @apply rounded-full font-secondary text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#3bace2] to-[#84fab0] font-bold font-primary hover:from-[#84fab0] hover:to-[#3bace2];
+  }
+  .section {
+    @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  }
 }
