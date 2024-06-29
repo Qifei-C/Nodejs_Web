@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const chalk = require('react-dev-utils/chalk');
 const paths = require('./paths');
 
-// Ensure the certificates and key provided are valid and if not
+// Ensure the certificate and key provided are valid and if not
 // throw an easy to debug error
 function validateKeyAndCerts({ cert, key, keyFile, crtFile }) {
   let encrypted;
@@ -15,7 +15,7 @@ function validateKeyAndCerts({ cert, key, keyFile, crtFile }) {
     encrypted = crypto.publicEncrypt(cert, Buffer.from('test'));
   } catch (err) {
     throw new Error(
-      `The certificates "${chalk.yellow(crtFile)}" is invalid.\n${err.message}`
+      `The certificate "${chalk.yellow(crtFile)}" is invalid.\n${err.message}`
     );
   }
 
@@ -24,7 +24,7 @@ function validateKeyAndCerts({ cert, key, keyFile, crtFile }) {
     crypto.privateDecrypt(key, encrypted);
   } catch (err) {
     throw new Error(
-      `The certificates key "${chalk.yellow(keyFile)}" is invalid.\n${
+      `The certificate key "${chalk.yellow(keyFile)}" is invalid.\n${
         err.message
       }`
     );

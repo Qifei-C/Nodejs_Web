@@ -31,7 +31,8 @@
     top: 0;
 }
 
-.timeline .icon-briefcase, .timeline .icon-graduation{
+.timeline .icon.briefcase,
+.timeline .icon-graduation{
     position:absolute;
     left: -0.4375rem;
     top: 0;

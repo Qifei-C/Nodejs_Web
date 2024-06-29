@@ -13,68 +13,6 @@
   }
 }
   
-.moving-background{
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, #454360, #45f324);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 40% 40%;
-}
-
-.bg {
-  animation:slide 12s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #fad2e1 50%, #dfe7fd 50%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 40% 40%;
-  top: 0;
-  bottom: 0;
-  left:-50%;
-  opacity:.5;
-  position: absolute;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:16s;
-}
-
-.bg3 {
-  animation-duration:20s;
-}
-
-.content {
-  background-color:rgba(255,255,255,.8);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
-  left:50%;
-  padding:10vmin;
-  position:fixed;
-  text-align:center;
-  top:50%;
-  transform:translate(-50%, -50%);
-}
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
-
 .web-header {
   background-color: #282c34;
   min-height: 100vh;

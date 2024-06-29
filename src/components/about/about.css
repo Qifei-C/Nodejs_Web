@@ -8,7 +8,7 @@
     background-color: var(--container-color);
     box-shadow: var(--shadow);
     border-radius: var(--border-radius);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 1.875rem;
     align-items: flex-start;
     position: relative;
@@ -23,28 +23,13 @@
     border-right: 15px solid var(--container-color);
     position: absolute;
     left: -0.8rem;
-}
-
-.about__info {
-    padding: 20px; /* Add padding around the info section */
-    border-radius: 10px; /* Optional: Add rounded corners */
+    top: 20%;
 }
 
 .about__description {
-    line-height: 1.6; /* Adjust line height for better readability */
-    margin-bottom: 20px; /* Add margin to the bottom of each paragraph for spacing */
+    margin-bottom: 1rem;
+    text-align: left;
 }
-
-.about__description::first-letter {
-    font-size: 2em; /* Make the first letter larger */
-    color: #454360; /* Change the color of the first letter */
-    font-weight: bold;
-    float: left; /* Float the first letter to the left */
-    line-height: 0.2; /* Ensure the line height does not affect the paragraph spacing */
-    margin-right: 0.1em; /* Add some space between the first letter and the text */
-    margin-top: 0.1em; /* Adjust as needed to align vertically */
-}
-
 
 .about__skills {
     row-gap: 1.25rem;
