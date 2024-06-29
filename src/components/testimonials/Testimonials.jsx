@@ -15,24 +15,31 @@ const data = [
     {
       id: 1,
       image: Image1,
-      title: "John Doe",
-      subtitle: "Product designer at Dribble",
+      title: "Niu Mu",
+      subtitle: "Student at Duke University",
       comment:
-        "I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍",
+        "I enjoy working with him and learn so much. Good luck! 👍",
     },
     {
-      id: 2,
-      image: Image3,
-      title: "John Doe",
-      subtitle: "Product designer at Dribble",
-      comment:
-        "I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍",
-    },
+        id: 2,
+        image: Image3,
+        title: "Han Wu",
+        subtitle: "Student at University of Southern California",
+        comment:
+          "Collaborating on this project was a fantastic experience. He is incredibly innovative and a pleasure to work with. 🌟",
+      },
+      {
+        id: 3,
+        image: Image1, // Replace with actual image path
+        title: "Andrew William",
+        subtitle: "Senior Data Analyst at Google",
+        comment: "He is a fast learner and brings a lot of enthusiasm to the team.",
+      },
   ];
 
 const Testimonials = () => {
     return (
-        <section className="testimonials container section">
+        <section className="testimonials container section" id="comments">
             <h2 className="section__title">Clients & Review</h2>
 
             <Swiper className="testmonials__container grid"

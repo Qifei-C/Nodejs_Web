@@ -20,13 +20,13 @@ const Sidebar = () => {
 
                         <li className="nav__item">
                             <a href="#about" className="nav__link">
-                                <i className="icon-user-following"></i>
+                                <i className="icon-book-open"></i>
                             </a>
                         </li>
 
                         <li className="nav__item">
-                            <a href="#services" className="nav__link">
-                                <i className="icon-briefcase"></i>
+                            <a href="#certificates" className="nav__link">
+                                <i className="icon-badge"></i>
                             </a>
                         </li>
 
@@ -37,20 +37,14 @@ const Sidebar = () => {
                         </li>
 
                         <li className="nav__item">
-                            <a href="#work" className="nav__link">
-                                <i className="icon-layers"></i>
-                            </a>
-                        </li>
-
-                        <li className="nav__item">
-                            <a href="#blog" className="nav__link">
-                                <i className="icon-note"></i>
+                            <a href="#comments" className="nav__link">
+                                <i className="icon-speech"></i>
                             </a>
                         </li>
 
                         <li className="nav__item">
                             <a href="#contact" className="nav__link">
-                                <i className="icon-bubble"></i>
+                                <i className="icon-bubbles"></i>
                             </a>
                         </li>
                     </ul>
@@ -58,7 +52,7 @@ const Sidebar = () => {
             </nav>
 
             <div className="nav__footer">
-                <span className="copyright">&copy; 2023 - 2024.</span>
+                <span className="copyright">&copy; 2024 - 2025.</span>
             </div>
         </aside>
     )

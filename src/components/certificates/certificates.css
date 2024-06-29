@@ -1,0 +1,83 @@
+.certificates__container {
+    display: grid; /* Make sure the grid display is set */
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.875rem;
+}
+
+.certificates__card {
+    text-align: center;
+    padding: 1.875rem;
+    border-radius: var(--border-radius);
+    background-color: var(--container-color);
+    transition: all 0.3s ease-in-out;
+    display: flex; /* Add this line to ensure flex properties apply */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.certificates__card:hover {
+    transform: translateY(-10px);
+}
+
+.certificates__card:nth-child(1) {
+    background-color: rgb(108,108,229);
+    box-shadow: 0px 5px 20px 0px rgb(108, 108, 229 / 50%);
+}
+
+.certificates__card:nth-child(2) {
+    background-color: rgb(249,215,76);
+    box-shadow: 0px 5px 20px 0px rgb(249, 215, 76 / 50%);
+}
+
+.certificates__card:nth-child(3) {
+    background-color: rgb(249, 123, 139);
+    box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+}
+
+.certificates__img-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.certificates__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Specific class for SVGs to turn white */
+.certificates__img--white {
+    filter: brightness(70%) saturate(100%) invert(100%) sepia(7%) saturate(153%) hue-rotate(225deg) brightness(113%) contrast(100%);
+}
+
+.certificates__img--dark {
+    filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2127%) hue-rotate(316deg) brightness(100%) contrast(98%);
+}
+
+
+
+
+.certificates__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.certificates__description {
+    color: #f8f9fa
+}
+
+.certificates__card:nth-child(2) .certificates__title {
+    color: var(--title-color)
+}
+
+.certificates__card:nth-child(2) .certificates__description {
+    color: var(--text-color)
+}

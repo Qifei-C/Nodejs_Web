@@ -9,55 +9,13 @@ const About = () => {
             <h2 className="section__title">
                 About Me
             </h2>
-
-            <div className="about__container grid">
-                <img src={about} alt="" className="about__img" />
-
-                <div className="about__data grid">
-                    <div className="about__info">
-                        <p className="about__description">
-                        I am Bolby Doe, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.
-                        </p>
-                        <a href="" className="btn">Download CV</a>
-                    </div>
-
-                    <div className="about__skills grid">
-                        <div className="skills__data">
-                            <div className="skills__titles">
-                                <h3 className="skills__name">Skill 1</h3>
-                                <span className="skills__number">100%</span>
-                            </div>
-
-                            <div className="skills__bar">
-                                <span className="skills__percentage skill1"></span>
-                            </div>
-                        </div>
-
-                        <div className="skills__data">
-                            <div className="skills__titles">
-                                <h3 className="skills__name">Skill 2</h3>
-                                <span className="skills__number">100%</span>
-                            </div>
-
-                            <div className="skills__bar">
-                                <span className="skills__percentage skill2"></span>
-                            </div>
-                        </div>
-
-                        <div className="skills__data">
-                            <div className="skills__titles">
-                                <h3 className="skills__name">Skill 3</h3>
-                                <span className="skills__number">100%</span>
-                            </div>
-
-                            <div className="skills__bar">
-                                <span className="skills__percentage skill3"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
+            <div className="about__info">
+                <p className="about__description">
+                I am a driven and knowledgeable professional with a robust background in finance, data management, and machine learning. Currently, I am pursuing a master's degree in Systems Engineering at the University of Pennsylvania, where my focus is on leveraging big data to develop innovative investment systems that can effectively manage market risk.
+                </p>
+                <p className="about__description">
+                My expertise lies in database building, AWS ML training and organization, and quantitative analysis. I am passionate about harnessing the power of data to provide insightful, data-driven solutions. Whether you need help with constructing a robust database, organizing and training machine learning models on AWS, or delving into quantitative finance, I am here to provide top-notch services tailored to meet your needs.
+                </p>
             </div>
 
             <AboutBox />
