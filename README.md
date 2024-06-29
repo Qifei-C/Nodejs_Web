@@ -26,6 +26,8 @@ Animated Background for Home Section:
 CSS Updates:
 -    Home component and background elements is now wrapped in `.home-container` class.
 -	Ensured the background does not cause horizontal scrolling by setting `overflow-x: hidden` on the body and html.
+-	Defined `.logo-container` and `#logo` styles in `animatedLogo.css` to align the logo size with the navigation bar.
+-	Ensured the blue dot remains within the bounds of the logo container while responding to global mouse movements.
 
 Styling Adjustments:
 -    Applied custom styles to the scroll down link to prevent it from appearing as a default hyperlink.
