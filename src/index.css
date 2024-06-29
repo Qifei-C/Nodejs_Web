@@ -1,99 +1,158 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*========== Google Fonts ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* 在你的 CSS 或 SCSS 文件中 */
-@font-face {
-  font-family: 'CentraNo2-Bold';
-  src: url('./assets/font/CentraNo2-Bold.ttf') format('truetype');
+/*========== Variables Fonts ==========*/
+:root {
+  /*========= Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(353, 100%, 65%);
+  --title-color: hsl(244, 24%, 26%);
+  --text-color: hsl(244, 16%, 43%);
+  --body-color: hsl(258, 60%, 98%);
+  --container-color: #fff;
+
+  /*========= Font and Typography ==========*/
+  /*.5rem = 8px | 1rem = 16px*/
+  --body-font: 'Rubik', sans-serif;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  /*========= Font Weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /*========= Box Shadow ==========*/
+  --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+
+  /*========= Border Radius ==========*/
+  --border-radius: 20px;
 }
 
-@font-face {
-  font-family: 'CentraNo1-Black';
-  src: url('./assets/font/CentraNo1-Black.ttf') format('truetype');
+/* Responsive typography */
+@media screen and (max-width: 1024px) {
+  :root {
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
 }
 
-@font-face {
-  font-family: 'CentraNo2-Book';
-  src: url('./assets/font/CentraNo2-Book.ttf') format('truetype');
+/*========== Base ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'CentraNo2-Medium';
-  src: url('./assets/font/CentraNo2-Medium.ttf') format('truetype');
+html {
+  scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: 'CentraNo2-Light';
-  src: url('./assets/font/CentraNo2-Light.ttf') format('truetype');
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  line-height: 1.7;
+  color: var(--text-color)
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+  line-height: 1.2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/*========== Resuable CSS Classes  ==========*/
+.container {
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+.section__title{
+  font-size: var(--h1-font-size);
+  margin-left: 0.875rem;
+  font-weight: var(--font-bold);
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+
+.section__title::before {
+  content: "";
+  background: url(./assets/dots-bg.svg);
+  height: 2.25rem;
+  width: 2.25rem;
+  position: absolute; 
+  left: -0.875rem;
+  top: -0.875rem;
 }
 
 .btn {
-  background: linear-gradient(
-    92.23deg,
-    #3bace2 21.43%,
-    #8ff4bc 100.04%
-  );
-  box-shadow: 0px 4.42184px 107.23px rgba(86, 114, 255, 0.51);
+  padding: 0.75rem 2rem;
+  line-height: 1;
+  border-radius: 1.875rem;
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  border: 1px soiid transparent;
+  color: #fff;
+  display: inline-block;
+  background-color: var(--first-color);
+  font-weight: var(--font-bold);
 }
 
-.gradient-text{
-  color: linear-gradient(
-    92.23deg,
-    #3bace2 21.43%,
-    #8ff4bc 100.04%
-  );
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .btn:hover {
-  background: linear-gradient(
-    92.23deg,
-    #84fab0 21.43%,
-    #3bace2 100.04%
-  );
-}
-
-.gradient,
-.active {
-  background: linear-gradient(
-    92.23deg,
-    #84fab0 21.43%,
-    #3bace2 100.04%
-  );
-}
-
-.active {
-  color: #fff;
-  padding: 1rem;
-  border-radius: 100%;
-}
-
-@layer base {
-  body {
-    @apply font-secondary text-lg leading-8 text-white;
-  }
-  .h2 {
-    @apply font-primary text-[36px] mb-6 tracking-[10%] uppercase;
-  }
-  .h3 {
-    @apply font-primary font-semibold text-[24px] mb-6 leading-[30px];
-  }
-  .btn {
-    @apply rounded-full font-secondary text-white font-medium;
-  }
-  .btn-sm {
-    @apply h-[48px] px-6 text-sm;
-  }
-  .btn-lg {
-    @apply h-[56px] px-10 text-base;
-  }
-  .btn-link {
-    @apply text-base;
-  }
-  .text-gradient {
-    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#3bace2] to-[#84fab0] font-bold font-primary hover:from-[#84fab0] hover:to-[#3bace2];
-  }
-  .section {
-    @apply py-8 lg:py-24 lg:h-screen flex items-center;
-  }
+  animation: button-push 0.3s linear 1;
 }
