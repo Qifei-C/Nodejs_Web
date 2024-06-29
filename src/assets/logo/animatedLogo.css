@@ -1,0 +1,14 @@
+/* animatedLogo.css */
+.logo-container {
+    position: relative;
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+}
