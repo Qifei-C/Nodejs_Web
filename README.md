@@ -3,6 +3,8 @@
 
 This repository contains the source code for my personal website, which I have re-deployed on AWS EC2 from a VPC provider. The website showcases my portfolio, blog, and contact information. It is built using node_js and follows AWS Cloud practices for deployment and maintenance.
 
+You may see the deployed website on [qifei-c.com](https://qifei-c.com)
+
 
 
 ## Updates
@@ -15,6 +17,7 @@ This repository contains the source code for my personal website, which I have r
 ### 2024-06-26
 
 - Added dynamic full-windowed homepage background based on CSS Styles.
+- Added windows size listening function, including a jumpping trigger to a warning page for accessing from device with viewport width of 980 pixels.
 
 ### 2024-02-24
 
