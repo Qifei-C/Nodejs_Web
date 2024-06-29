@@ -12,8 +12,8 @@ const AnimatedLogo = () => {
             const rect = logoContainerRef.current.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2 + 150;
             const centerY = rect.top + rect.height / 2 + 145;
-            const mouseX = e.clientX;
-            const mouseY = e.clientY;
+            const mouseX = Math.min(e.clientX + 150,window.innerWidth);
+            const mouseY = Math.min(e.clientY + 150,window.innerHeight);
 
             // Calculate distances to the borders of the window
             const distanceToLeft = mouseX;
