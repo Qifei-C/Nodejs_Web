@@ -1,5 +1,6 @@
 
-# Personal Website
+#Portfolio React Webpage 
+*powered by Nodejs on AWS*
 
 This repository contains the source code for my personal website, which I have re-deployed on AWS EC2 from a VPC provider. The website showcases my portfolio, blog, and contact information. It is built using node_js and follows AWS Cloud practices for deployment and maintenance. All sensitive data has been erased for a usage of demo.
 
