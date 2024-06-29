@@ -11,6 +11,14 @@ You may see the deployed website on [qifei-c.com](https://qifei-c.com)
 ## Updates
 
 ### 2024-06-30
+
+**New Feature: Interactive Logo with Mouse Tracking**
+
+Animated Logo Component:
+-	Added AnimatedLogo.jsx to encapsulate the logo and its interactive behavior.
+-	Implemented global mouse tracking to ensure the blue dot follows the mouse pointer across the entire window.
+-	Calculated the movement radius of the blue dot based on the distance between the mouse pointer and the nearest window border and ddjusted the radius to create an animation as the mouse pointer moves closer to or farther from the icon.
+
 Animated Background for Home Section:
 -	Added an animated gradient background that is confined to the “Home” section.
 -	New CSS keyframes to create sliding animation.
