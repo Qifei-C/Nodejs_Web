@@ -10,6 +10,19 @@ You may see the deployed website on [qifei-c.com](https://qifei-c.com)
 
 ## Updates
 
+### 2024-06-30
+Animated Background for Home Section:
+-	Added an animated gradient background that is confined to the “Home” section.
+-	New CSS keyframes to create sliding animation.
+
+CSS Updates:
+-    Home component and background elements is now wrapped in `.home-container` class.
+-	Ensured the background does not cause horizontal scrolling by setting `overflow-x: hidden` on the body and html.
+
+Styling Adjustments:
+-    Applied custom styles to the scroll down link to prevent it from appearing as a default hyperlink.
+-    Enhanced the visual appeal of the “About” section by increasing the size of the first letter of each paragraph without affecting line spacing.
+
 ### 2024-06-29
 
 - Added detailed deployment instructions, including troubleshooting tips for security group and port settings.
