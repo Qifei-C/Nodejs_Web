@@ -23,6 +23,10 @@ Animated Background for Home Section:
 -	Added an animated gradient background that is confined to the “Home” section.
 -	New CSS keyframes to create sliding animation.
 
+Sidebar Integration:
+-    Integrated the AnimatedLogo component into the Sidebar component.
+-    Updated sidebar.css to accommodate the new interactive logo feature.
+
 CSS Updates:
 -    Home component and background elements is now wrapped in `.home-container` class.
 -	Ensured the background does not cause horizontal scrolling by setting `overflow-x: hidden` on the body and html.
