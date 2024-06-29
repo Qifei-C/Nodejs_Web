@@ -85,9 +85,9 @@ const AnimatedLogo = () => {
                         ref={blueDotRef} 
                         style={{ opacity: 0.987 }} 
                         fill="#001eff" 
-                        cx="160" 
-                        cy="160" 
-                        r="40"
+                        cx="205" 
+                        cy="205" 
+                        r="45"
                     />
                 </g>
             </svg>
