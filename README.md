@@ -12,6 +12,17 @@ This repository contains the source code for my personal website, which I have r
 - Added detailed deployment instructions, including troubleshooting tips for security group and port settings.
 - Included credits for the video tutorial and open resources used in the website.
 
+### 2024-06-26
+
+- Added dynamic full-windowed homepage background based on CSS Styles.
+
+### 2024-02-24
+
+- Added a pop-up windows for people complete specific tasks.
+
+### 2024-02-19
+
+- Add tracking pages based on json database.
 
 
 ## Table of Contents
