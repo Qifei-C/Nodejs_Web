@@ -14,6 +14,10 @@ You may see the deployed website on [qifei-c.com](https://qifei-c.com)
 
 **New Feature: Interactive Logo with Mouse Tracking**
 
+Active Link Highlighting in Sidebar:
+-    The sidebar now correctly highlights the active section link as you scroll through the content.
+-    Clicking on a link in the sidebar smoothly scrolls to the respective section.
+
 Animated Logo Component:
 -	Added AnimatedLogo.jsx to encapsulate the logo and its interactive behavior.
 -	Implemented global mouse tracking to ensure the blue dot follows the mouse pointer across the entire window.
@@ -27,8 +31,36 @@ Sidebar Integration:
 -    Integrated the AnimatedLogo component into the Sidebar component.
 -    Updated sidebar.css to accommodate the new interactive logo feature.
 
+
+**Bug Fixed**
+
+Fixed Scroll Event Detection:
+-    Resolved an issue where the scroll event listener was not firing correctly.
+-    Ensured the correct element handles the scroll, providing accurate scroll position detection.
+
+Corrected Element Positioning:
+-    Fixed positioning issues that interfered with scroll behavior.
+-    Ensured the content elements are positioned relative to the main container.
+
+Improved Event Listener Attachment:
+-    Verified and corrected the attachment of event listeners to ensure proper functionality.
+-    Added necessary checks to handle cases where references might be null.
+
+**Technical Improvements**
+
+Refactored CSS for Clarity and Maintainability:
+-    Simplified and cleaned up CSS rules for better readability.
+-    Ensured consistent styling across different components.
+Optimized JavaScript Logic:
+-    Improved the logic for detecting active sections and handling link clicks.
+-    Added debugging logs for easier troubleshooting and maintenance.
+
+Enhanced User Experience:
+-    Ensured smooth transitions and interactions throughout the application.
+-    Added feedback for user actions, such as active link highlighting and smooth scrolling.
+
 CSS Updates:
--    Home component and background elements is now wrapped in `.home-container` class.
+-     Home component and background elements is now wrapped in `.home-container` class.
 -	Ensured the background does not cause horizontal scrolling by setting `overflow-x: hidden` on the body and html.
 -	Defined `.logo-container` and `#logo` styles in `animatedLogo.css` to align the logo size with the navigation bar.
 -	Ensured the blue dot remains within the bounds of the logo container while responding to global mouse movements.
@@ -36,6 +68,8 @@ CSS Updates:
 Styling Adjustments:
 -    Applied custom styles to the scroll down link to prevent it from appearing as a default hyperlink.
 -    Enhanced the visual appeal of the “About” section by increasing the size of the first letter of each paragraph without affecting line spacing.
+
+
 
 ### 2024-06-29
 
