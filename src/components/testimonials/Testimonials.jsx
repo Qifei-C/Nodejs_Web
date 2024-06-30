@@ -39,7 +39,7 @@ const data = [
 
 const Testimonials = () => {
     return (
-        <section className="testimonials container section" id="comments">
+        <section className="testimonials container section" id="testimonials">
             <h2 className="section__title">Clients & Review</h2>
 
             <Swiper className="testmonials__container grid"
