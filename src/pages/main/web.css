@@ -12,6 +12,21 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Container for the Home section with the background */
+.home-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Make it full viewport height */
+}
   
 .moving-background{
   z-index: -1;
@@ -20,37 +35,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, #454360, #45f324);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 40% 40%;
-}
-
-.bg {
-  animation:slide 12s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #fad2e1 50%, #dfe7fd 50%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 40% 40%;
-  top: 0;
-  bottom: 0;
-  left:-50%;
-  opacity:.5;
-  position: absolute;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:16s;
-}
-
-.bg3 {
-  animation-duration:20s;
 }
 
 .content {
@@ -101,4 +89,6 @@
   
 .main {
   margin-left: 110px;
+  overflow-y: auto;
+  height: 100vh; /* Ensure the main content area takes full viewport height */
 }

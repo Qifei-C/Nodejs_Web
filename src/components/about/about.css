@@ -37,7 +37,7 @@
 
 .about__description::first-letter {
     font-size: 2em; /* Make the first letter larger */
-    color: #454360; /* Change the color of the first letter */
+    color: #212529; /* Change the color of the first letter */
     font-weight: bold;
     float: left; /* Float the first letter to the left */
     line-height: 0.2; /* Ensure the line height does not affect the paragraph spacing */
@@ -81,17 +81,17 @@
 
 .skill1 {
     width: 100%;
-    background-color: rgb(255,209,92);
+    background-color: #ffca3a;
 } 
 
 .skill2 {
     width: 100%;
-    background-color: rgb(255,76,96);
+    background-color: #ff595e;
 } 
 
 .skill3 {
     width: 100%;
-    background-color: rgb(108,108,255);
+    background-color: #1982c4;
 } 
 
 .about__boxes {
@@ -107,7 +107,7 @@
 
 .about__icon {
     font-size: var(--h1-font-size);
-    color: #dedeea;
+    color: #495057;
 }
 
 .about__title{

@@ -53,9 +53,8 @@
     cursor: pointer;
 }
 
-.nav__link:hover,
-.nav__link.active {
-    color: hsl(43, 100%, 65%);
+.nav__link:hover {
+    color: #7209b7;
 }
 
 .nav__link i {
@@ -65,7 +64,7 @@
 
 
 .copyright {
-    color: hsl(245, 15%, 65%);
+    color: #adb5bd;
     font-size: var(--font-bold);
     transform: rotate(180deg);
     writing-mode: vertical-rl;
@@ -74,3 +73,31 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* sidebar.css */
+
+.nav__link.active-home {
+    color: #f94144
+}
+
+.nav__link.active-about {
+    color: #f9844a
+}
+
+.nav__link.active-certificates {
+    color: #f9c74f
+}
+
+.nav__link.active-resume {
+    color: #90be6d
+}
+
+.nav__link.active-testimonials {
+    color: #43aa8b
+}
+
+.nav__link.active-contact {
+    color: #577590
+}
+
+/* Add other styles as needed */

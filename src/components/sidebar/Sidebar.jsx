@@ -50,6 +50,8 @@ const Sidebar = ({ mainRef }) => {
         setActiveLink(id);
     };
 
+    const getActiveClass = (id) => `nav__link ${activeLink === id ? `active-${id}` : ''}`;
+
     return (
         <aside className="aside">
             <div className="nav__logo" onClick={() => handleLinkClick('home')}>
@@ -61,7 +63,7 @@ const Sidebar = ({ mainRef }) => {
                     <ul className="nav__list">
                         <li className="nav__item">
                             <div 
-                                className={`nav__link ${activeLink === 'home' ? 'active' : ''}`} 
+                                className={getActiveClass('home')} 
                                 onClick={() => handleLinkClick('home')}
                             >
                                 <i className="icon-home"></i>
@@ -70,7 +72,7 @@ const Sidebar = ({ mainRef }) => {
 
                         <li className="nav__item">
                             <div 
-                                className={`nav__link ${activeLink === 'about' ? 'active' : ''}`} 
+                                className={getActiveClass('about')} 
                                 onClick={() => handleLinkClick('about')}
                             >
                                 <i className="icon-book-open"></i>
@@ -79,7 +81,7 @@ const Sidebar = ({ mainRef }) => {
 
                         <li className="nav__item">
                             <div 
-                                className={`nav__link ${activeLink === 'certificates' ? 'active' : ''}`} 
+                                className={getActiveClass('certificates')} 
                                 onClick={() => handleLinkClick('certificates')}
                             >
                                 <i className="icon-badge"></i>
@@ -88,7 +90,7 @@ const Sidebar = ({ mainRef }) => {
 
                         <li className="nav__item">
                             <div 
-                                className={`nav__link ${activeLink === 'resume' ? 'active' : ''}`} 
+                                className={getActiveClass('resume')} 
                                 onClick={() => handleLinkClick('resume')}
                             >
                                 <i className="icon-graduation"></i>
@@ -97,7 +99,7 @@ const Sidebar = ({ mainRef }) => {
 
                         <li className="nav__item">
                             <div 
-                                className={`nav__link ${activeLink === 'testimonials' ? 'active' : ''}`} 
+                                className={getActiveClass('testimonials')} 
                                 onClick={() => handleLinkClick('testimonials')}
                             >
                                 <i className="icon-speech"></i>
@@ -106,7 +108,7 @@ const Sidebar = ({ mainRef }) => {
 
                         <li className="nav__item">
                             <div 
-                                className={`nav__link ${activeLink === 'contact' ? 'active' : ''}`} 
+                                className={getActiveClass('contact')} 
                                 onClick={() => handleLinkClick('contact')}
                             >
                                 <i className="icon-bubbles"></i>
@@ -122,5 +124,6 @@ const Sidebar = ({ mainRef }) => {
         </aside>
     );
 };
+
 
 export default Sidebar;

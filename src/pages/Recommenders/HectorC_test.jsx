@@ -6,8 +6,8 @@ import Popup from '../../components/popup/Popup';
 import confetti from '../Thanks/confetti.min.js';
 
 const recommender =  {
-    first: "FirstName",
-    last: "LastName"
+    first: "Hector",
+    last: "Ceniceros"
   };
 
 
@@ -128,7 +128,7 @@ const HectorC = () => {
             {items.map((elem, index) => {
               const { school, program, track, recommenders } = elem;
               const recommenderStatus = recommenders.find(r => r.name === recommender.first)?.status || 'Status Unknown';
-              // Assign class based on status
+              // Assign className based on status
               const statusClassName = recommenderStatus === "Received" ? "status-received" : 
                                       recommenderStatus === "Awaiting" ? "status-awaiting" : 
                                       recommenderStatus === "In Progress" ? "status-in-progress" :

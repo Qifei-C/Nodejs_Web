@@ -1,19 +1,21 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState  } from "react";
 import "./animatedLogo.css";
 
 const AnimatedLogo = () => {
     const blueDotRef = useRef(null);
     const logoContainerRef = useRef(null);
+    const [isMouseOver, setIsMouseOver] = useState(false);
+    const blinkTimeoutRef = useRef(null);
 
     useEffect(() => {
         const handleMouseMove = (e) => {
-            if (!blueDotRef.current || !logoContainerRef.current) return;
+            if (!blueDotRef.current || !logoContainerRef.current || isMouseOver) return;
 
             const rect = logoContainerRef.current.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2 + 150;
-            const centerY = rect.top + rect.height / 2 + 145;
-            const mouseX = Math.min(e.clientX + 150,window.innerWidth);
-            const mouseY = Math.min(e.clientY + 150,window.innerHeight);
+            const centerX = rect.left + rect.width / 2 + 110;
+            const centerY = rect.top + rect.height / 2 + 110;
+            const mouseX = Math.min(e.clientX + 100,window.innerWidth);
+            const mouseY = Math.min(e.clientY + 100,window.innerHeight);
 
             // Calculate distances to the borders of the window
             const distanceToLeft = mouseX;
@@ -36,7 +38,7 @@ const AnimatedLogo = () => {
             const angle = Math.atan2(distanceY, distanceX);
 
             // Calculate the radius for the blue dot movement
-            const maxRadius = 65; // Adjust the maximum radius as needed
+            const maxRadius = 70; // Adjust the maximum radius as needed
             const radius = maxRadius * normalizedDistance;
 
             // Calculate the new position for the blue dot
@@ -47,16 +49,65 @@ const AnimatedLogo = () => {
             const localDotX = dotX - rect.left;
             const localDotY = dotY - rect.top;
 
-            blueDotRef.current.setAttribute('cx', localDotX);
-            blueDotRef.current.setAttribute('cy', localDotY);
+            blueDotRef.current.setAttribute('x', localDotX);
+            blueDotRef.current.setAttribute('y', localDotY);
+        };
+
+        const handleMouseEnter = () => {
+            setIsMouseOver(true);
+            logoContainerRef.current.classList.add('shaking');
+            blueDotRef.current.classList.add('compress');
+            blueDotRef.current.classList.remove('decompress');
+            clearTimeout(blinkTimeoutRef.current); // Stop blinking
+        };
+
+        const handleMouseLeave = () => {
+            setIsMouseOver(false);
+            logoContainerRef.current.classList.remove('shaking');
+            blueDotRef.current.classList.remove('compress');
+            blueDotRef.current.classList.add('decompress');
+            startBlinking(); // Resume blinking
         };
 
         window.addEventListener('mousemove', handleMouseMove);
+        if (logoContainerRef.current) {
+            logoContainerRef.current.addEventListener('mouseenter', handleMouseEnter);
+            logoContainerRef.current.addEventListener('mouseleave', handleMouseLeave);
+        }
+
+        const blink = () => {
+            if (!blueDotRef.current || !logoContainerRef.current || isMouseOver) return;
+            
+            blueDotRef.current.classList.add('compress');
+
+            setTimeout(() => {
+                blueDotRef.current.classList.remove('compress');
+                blueDotRef.current.classList.add('decompress');
+                setTimeout(() => {
+                    blueDotRef.current.classList.remove('decompress');
+                }, 500);
+            }, 500);
+        };
+
+        const startBlinking = () => {
+            const randomTime = Math.floor(Math.random() * 1000) + 10000; // Random interval between 2-7 seconds
+            blinkTimeoutRef.current = setTimeout(() => {
+                blink();
+                startBlinking();
+            }, randomTime);
+        };
+
+        startBlinking();
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
+            if (logoContainerRef.current) {
+                logoContainerRef.current.removeEventListener('mouseenter', handleMouseEnter);
+                logoContainerRef.current.removeEventListener('mouseleave', handleMouseLeave);
+            }
+            clearTimeout(blinkTimeoutRef.current);
         };
-    }, []);
+    }, [isMouseOver]);
 
     return (
         <div className="logo-container" ref={logoContainerRef}>
@@ -80,14 +131,17 @@ const AnimatedLogo = () => {
                     />
                 </g>
                 <g>
-                    <circle 
+                    <rect
                         id="blue-dot" 
                         ref={blueDotRef} 
                         style={{ opacity: 0.987 }} 
                         fill="#001eff" 
-                        cx="205" 
-                        cy="205" 
-                        r="45"
+                        x="155" 
+                        y="155" 
+                        width="80"
+                        height="80"
+                        rx="50"
+                        ry="50"
                     />
                 </g>
             </svg>

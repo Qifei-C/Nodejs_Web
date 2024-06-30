@@ -5,7 +5,9 @@ const schoolList = [
         track: "Master of Analytics", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -14,7 +16,11 @@ const schoolList = [
         track: "Master of Science in Data Science with career in Research", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Raya", status: "Awaiting" },
+            { name: "Hector", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -23,7 +29,11 @@ const schoolList = [
         track: "Master's Program in Computational and Applied Mathematics with interest area in Machine Learning", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Raya", status: "Awaiting" },
+            { name: "Hector", status: "Received" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -32,7 +42,9 @@ const schoolList = [
         track: "Master in Data Science", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -43,6 +55,8 @@ const schoolList = [
 
         recommenders: [
             { name: "Hector", status: "Awaiting" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -51,7 +65,8 @@ const schoolList = [
         track: "Master in Operations Research and Information Engineering concentration in Data Science", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -60,7 +75,10 @@ const schoolList = [
         track: "Master in Business Analysis", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Raya", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -69,7 +87,10 @@ const schoolList = [
         track: "Master of Science in Data Science with Interest Area in Deep Learning", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Awaiting" },
+            { name: "Raya", status: "Awaiting" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Laura", status: "Awaiting" },
+            { name: "Hector", status: "Awaiting" }
         ]
     },
     {
@@ -78,7 +99,9 @@ const schoolList = [
         track: "Master in interdisciplinary Data Science", 
         status: "Awaiting",
         recommenders: [
-            { name: "FirstName", status: "Awaiting" },
+            { name: "Raya", status: "Awaiting" },
+            { name: "Hal", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -87,7 +110,9 @@ const schoolList = [
         track: "Master in Systems Engineering", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Raya", status: "Awaiting" },
+            { name: "Laura", status: "Received" }
         ]
     },
     {
@@ -96,7 +121,9 @@ const schoolList = [
         track: "Master in Data Science", 
         status: "Awaiting", 
         recommenders: [
-            { name: "FirstName", status: "Received" },
+            { name: "Andrew", status: "Received" },
+            { name: "Hector", status: "Awaiting" },
+            { name: "Laura", status: "Awaiting" }
         ]
     }
 ];

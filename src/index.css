@@ -5,10 +5,10 @@
 :root {
   /*========= Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(353, 100%, 65%);
-  --title-color: hsl(244, 24%, 26%);
-  --text-color: hsl(244, 16%, 43%);
-  --body-color: hsl(258, 60%, 98%);
+  --first-color: #ff595e;
+  --title-color: #212529;
+  --text-color: #343a40;
+  --body-color: #f8f9fa;
   --container-color: #fff;
 
   /*========= Font and Typography ==========*/
@@ -124,11 +124,12 @@ img {
 .section__title::before {
   content: "";
   background: url(./assets/dots-bg.svg);
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
   position: absolute; 
   left: -0.875rem;
   top: -0.875rem;
+  z-index: -1;
 }
 
 .btn {

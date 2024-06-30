@@ -12,3 +12,50 @@
     width: 100%;
     height: 100%;
 }
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(1px, 1px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-1px, 1px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+  
+.shaking {
+    animation: tilt-n-move-shaking 0.1s infinite;
+}
+
+
+@keyframes compress-eye-and-morph {
+    0% { 
+      transform: translateY(0) scaleY(1); 
+      rx: 50; 
+      ry: 50; 
+    }
+    100% { 
+      transform: translateY(90px) scaleY(0.5); 
+      rx: 0; 
+      ry: 0; 
+    }
+  }
+  
+  @keyframes decompress-eye-and-morph {
+    0% { 
+      transform: translateY(90px) scaleY(0.5); 
+      rx: 0; 
+      ry: 0; 
+    }
+    100% { 
+      transform: translateY(0) scaleY(1); 
+      rx: 50; 
+      ry: 50; 
+    }
+  }
+  
+  .compress {
+    animation: compress-eye-and-morph 0.5s forwards; /* Only play once */
+  }
+  
+  .decompress {
+    animation: decompress-eye-and-morph 0.5s forwards; /* Only play once */
+  }

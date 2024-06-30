@@ -20,17 +20,17 @@
 }
 
 .certificates__card:nth-child(1) {
-    background-color: rgb(108,108,229);
+    background-color: #1982c4;
     box-shadow: 0px 5px 20px 0px rgb(108, 108, 229 / 50%);
 }
 
 .certificates__card:nth-child(2) {
-    background-color: rgb(249,215,76);
+    background-color: #ffca3a;
     box-shadow: 0px 5px 20px 0px rgb(249, 215, 76 / 50%);
 }
 
 .certificates__card:nth-child(3) {
-    background-color: rgb(249, 123, 139);
+    background-color: #ff595e;
     box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
 }
 
@@ -52,7 +52,8 @@
     display: block;
 }
 
-/* Specific class for SVGs to turn white */
+/* Specific className for SVGs to turn white */
+
 .certificates__img--white {
     filter: brightness(70%) saturate(100%) invert(100%) sepia(7%) saturate(153%) hue-rotate(225deg) brightness(113%) contrast(100%);
 }
@@ -60,6 +61,7 @@
 .certificates__img--dark {
     filter: brightness(0) saturate(100%) invert(89%) sepia(4%) saturate(2127%) hue-rotate(316deg) brightness(100%) contrast(98%);
 }
+
 
 
 
