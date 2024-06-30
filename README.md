@@ -12,6 +12,8 @@ You may see the deployed website on [qifei-c.com](https://qifei-c.com)
 
 ### 2024-06-30
 
+Evening Update: Pride Theme
+
 **New Feature: Interactive Logo with Mouse Tracking**
 
 Active Link Highlighting in Sidebar:
